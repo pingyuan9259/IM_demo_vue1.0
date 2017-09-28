@@ -1,0 +1,191 @@
+@import '../../../assets/sprites/sprites';
+
+.modules-chat-send {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 176px;
+  border-top: 1px solid #B6BBC3;
+  background: #F7F8FA;
+
+  .chat-forbidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #71767C;
+    font-weight: bold;
+    text-align: center;
+    background-color: #F7F8FA;
+    z-index: 1;
+
+    > div {
+      margin-top: 80px;
+    }
+
+    i {
+      vertical-align: -4px;
+      @include sprite($forbidden, inline-block);
+    }
+  }
+
+  .chat-handle {
+    position: relative;
+    font-size: 0;
+    height: 45px;
+    padding: 10px 25px 0 25px;
+
+    .chat-handle-input {
+      display: inline-block;
+
+      .cursor-forbidden {
+        cursor: not-allowed !important;
+      }
+
+      > i.chat-upload-mp3 {
+        position: relative;
+        margin-right: 25px;
+        cursor: pointer;
+        width: 21.7px;
+        height: 20px;
+        @include sprite($upload_mp3, inline-block);
+
+        > i.forbidden-mask {
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+
+          &.hide {
+            display: none;
+          }
+        }
+      }
+
+      > a {
+        position: relative;
+        display: inline-block;
+        width: 38px;
+        height: 20px;
+        border-radius: 3px;
+        margin-right: 25px;
+        vertical-align: 3px;
+        background: #BCC1C9;
+
+        > i {
+          width: 17px;
+        }
+
+        &.active {
+          background: #04C9BF;
+          > i {
+            position: absolute;
+            right: 0;
+          }
+        }
+
+        &.chat-live-handle {
+          > i {
+            @include sprite($toggle_live, inline-block);
+          }
+        }
+
+        &.chat-mic-handle {
+          > i {
+            @include sprite($toggle_mic, inline-block);
+          }
+        }
+
+        &.chat-can-handle {
+          > i {
+            @include sprite($toggle_can_chat, inline-block);
+          }
+        }
+
+        &.chat-blackboard-handle {
+          > i {
+            @include sprite($toggle_blackboard, inline-block);
+          }
+        }
+      }
+
+      .dialog-tip-con {
+        font-size: 16px;
+        width: 400px;
+
+        .dialog-tip-head {
+          padding-left: 0;
+        }
+
+        .content {
+          margin-top: 30px;
+          font-size: 18px;
+          text-align: center;
+        }
+
+        .tip {
+          margin-bottom: 30px;
+          margin-top: 10px;
+          text-align: center;
+          font-size: 14px;
+        }
+
+        .submit {
+          margin-top: 20px;
+          text-align: center;
+
+          > a {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            background: #04C9BF;
+          }
+        }
+      }
+    }
+
+
+    > i {
+      position: relative;
+      margin-right: 25px;
+      cursor: pointer;
+
+      &.chat-emoji {
+        @include sprite($emoji, inline-block);
+      }
+
+      &.chat-upload-img {
+        width: 21.7px;
+        height: 20px;
+        vertical-align: 1px;
+        @include sprite($uploadImg, inline-block);
+      }
+    }
+
+    .module-emoji {
+      position: absolute;
+      left: 0;
+      top: -292px;
+      z-index: 9999;
+    }
+  }
+
+  textarea.chat-box {
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    width: 100%;
+    padding: 0 25px;
+    border: none;
+    resize: none;
+    background: transparent;
+  }
+}

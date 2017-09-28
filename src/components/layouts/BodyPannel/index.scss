@@ -1,0 +1,58 @@
+@import '../../../assets/sprites/sprites';
+
+.layout-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 248px;
+  right: 0;
+  min-width: 600px;
+
+  .chat-body-con {
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    width: 100%;
+
+    .layout-right {
+      display: none;
+    }
+
+    &.active-right {
+      .chat-body-main {
+        margin-right: 350px;
+      }
+      .layout-right {
+        display: block;
+        width: 350px;
+      }
+    }
+
+    .chat-body-blank {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      color: #ADB2BC;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: -76px;
+      text-align: center;
+
+      > i {
+        @include sprite($blank_chat, inline-block);
+      }
+      > span {
+        display: block;
+      }
+    }
+  }
+
+  .chat-body-main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    float: left;
+    margin-right: 0;
+    height: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+.repair-box {
+  text-align: center;
+}
+
+.read-post {
+  width: 12%;
+  display: block;
+  z-index: 0;
+}
+
+.bg-image {
+  padding: 25px;
+  width: 90%;
+  z-index: -1;
+}
+
+.bg-image, .read-post {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,113 @@
+@import '../../../styles/base/common';
+@import '../../../assets/sprites/sprites';
+
+.module-posts-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .nav-posts {
+    width: 100%;
+    border-bottom: 1px solid #D4D9E0;
+
+    > a {
+      display: inline-block;
+      width: 50%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 16px;
+      color: #5F5F5F;
+      background: #fff;
+      text-decoration: none;
+
+      &.active {
+        color: #fff;
+        background: #04C1B8;
+      }
+    }
+
+    .search-post-nav {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding-left: 18px;
+      color: #5F5F5F;
+      background: #fff;
+
+      > i {
+        position: absolute;
+        right: 18px;
+        top: 15px;
+        cursor: pointer;
+        @include sprite($close, inline-block);
+      }
+    }
+  }
+
+  .posts-list-con {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    bottom: 0;
+    overflow: auto;
+
+    .no-posts-icon {
+      @include sprite($no_post_list, block);
+      margin: 0 auto;
+      margin-top: 235px;
+    }
+
+    .no-posts-tip {
+      color: #ADB2BC;
+      font-size: 16px;
+      margin-top: 24px;
+      text-align: center;
+    }
+  }
+
+  .posts-list {
+    overflow: hidden;
+
+    > li {
+      width: 100%;
+      height: 65px;
+      padding: 10px 18px;
+
+      &:hover {
+        background: #F0F2F6;
+      }
+
+      > a {
+        display: block;
+
+        > img {
+          float: left;
+          width: 45px;
+          height: 45px;
+          border-radius: 4px;
+        }
+
+        .detail-post-item {
+          width: 245px;
+          float: left;
+          margin-left: 12px;
+
+          .post-title {
+            color: #333;
+            font-size: 14px;
+            margin-top: 4px;
+            @include ellipsis;
+          }
+
+          .post-author {
+            color: #999;
+            font-size: 12px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

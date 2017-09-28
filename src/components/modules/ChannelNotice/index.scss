@@ -1,0 +1,42 @@
+@import '../../../assets/sprites/sprites';
+
+.module-channel-notice {
+  position: absolute;
+  left: 50%;
+  top: 44px;
+  width: 440px;
+  height: 300px;
+  margin-left: -220px;
+  padding: 20px 15px;
+  color: #333;
+  background: #fff;
+  border-radius: 4px;
+  z-index: 5;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, .5);
+
+  > hr {
+    border: none;
+    outline: none;
+    height: 2px;
+    margin: 11px 0 17px 0;
+    background: #04C9BF;
+  }
+
+  .channel-notice-content {
+    line-height: 18px;
+  }
+
+  .channel-notice-title {
+    font-weight: bold;
+  }
+
+  .close-notice {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+    @include sprite($close, inline-block);
+  }
+}

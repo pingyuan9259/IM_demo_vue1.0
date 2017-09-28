@@ -1,0 +1,67 @@
+$menu_down: -0px -0px 15px 11px;
+$menu_up: -0px -11px 15px 11px;
+$menu_group_notice: -0px -22px 16px 15px;
+$menu_group_members: -0px -37px 18px 15px;
+$vip: -0px -52px 19px 17px;
+$no_disturb: -0px -69px 16px 17px;
+$no_vip: -0px -86px 19px 17px;
+$logout: -0px -103px 18px 18px;
+$sex_woman: -0px -121px 18px 18px;
+$toggle_mic: -0px -139px 17px 20px;
+$toggle_blackboard: -0px -159px 17px 20px;
+$toggle_can_chat: -0px -179px 17px 20px;
+$close: -0px -199px 20px 20px;
+$toggle_live: -0px -219px 17px 20px;
+$forbidden: -0px -239px 21px 20px;
+$sex_man: -0px -259px 18px 20px;
+$write_link: -0px -279px 20px 22px;
+$search_post_active: -0px -301px 21px 23px;
+$search_post: -0px -324px 21px 23px;
+$member_search: -0px -347px 20px 23px;
+$group_members: -0px -370px 29px 23px;
+$auth: -0px -393px 24px 24px;
+$group_notice: -0px -417px 21px 24px;
+$post_list: -0px -441px 20px 24px;
+$post_list_active: -0px -465px 20px 24px;
+$uploadImg: -0px -489px 26px 24px;
+$chat_link: -0px -513px 26px 25px;
+$emoji: -0px -538px 26px 26px;
+$upload_mp3: -0px -564px 25px 26px;
+$group_avatar: -0px -590px 60px 60px;
+$blank_chat: -0px -650px 92px 80px;
+$no_post_list: -0px -730px 124px 109px;
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@function sprite-width($sprite) {
+   @return nth($sprite, 3);
+}
+@function sprite-height($sprite) {
+   @return nth($sprite, 4);
+}
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1);
+  $sprite-offset-y: nth($sprite, 2);
+  background-position: $sprite-offset-x $sprite-offset-y;
+}
+@mixin sprite($sprite, $display: block) {
+   @include sprite-position($sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: $display;
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+.icon {
+  background-image: url('../../../assets/sprites/sprites.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icon {
+    background-image: url('../../../assets/sprites/sprites@2x.png');
+    background-size: 124px 839px;
+  }
+}

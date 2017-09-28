@@ -1,0 +1,25 @@
+@import '../../../assets/sprites/sprites';
+
+.xvideo-module {
+  .jw-controlbar {
+    display: block !important;
+
+    .jw-icon-barlogo {
+      display: none !important;
+    }
+  }
+
+  .player-tip {
+    width: 349px;
+    height: 200px;
+    line-height: 200px;
+    color: #fff;
+    font-size: 20px;
+    background: #444649;
+    text-align: center;
+  }
+
+  .dialog-tip-body {
+    padding: 35px 0;
+  }
+}

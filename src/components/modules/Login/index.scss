@@ -1,0 +1,561 @@
+.module-login {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 99;
+
+  .wrap {
+    width: 100%;
+    height: 100%;
+
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url(../../../assets/xs-bg.jpg);
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .index_logo {
+      position: absolute;
+      height: 56px;
+      /*top:66px;*/
+      top: 9%;
+      left: 10%;
+      overflow: hidden;
+
+      >img {
+        height: 100%;
+        display: inline-block;
+      }
+    }
+
+    .massage_a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    .load .QR_code img,
+    .load .mobile_icon img,
+    .load .sweep img,
+    .success .user img {
+        width: 100%;
+    }
+
+    .success .user {
+      position: relative;
+    }
+
+    .success .user img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform:translate(-50%, -50%);
+      transform:translate(-50%, -50%);
+    }
+
+    .foot_title {
+      position: fixed;
+      bottom: 48px;
+      right: 70px;
+      color: #fff;
+      font-size: 19px;
+    }
+    @media screen and (max-width:2560px) {
+      .load {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 356px;
+        height: 470px;
+        background: #fff;
+        margin-top: -235px;
+        margin-left: -178px;
+        border-radius: 5px;
+        transition: .8s ease all;
+        opacity: 1;
+
+        .loading {
+
+          .QR_create {
+
+            .QR_code,
+            .load_box {
+              width: 196px;
+              height: 196px;
+              overflow: hidden;
+              margin-top: 60px;
+              margin-left: 81px;
+            }
+
+            .load_box {
+              position: relative;
+
+              >img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform:translate(-50%, -50%);
+                transform:translate(-50%, -50%);
+              }
+            }
+
+            .QR_p {
+              margin-top: 10px;
+              text-align: center;
+              font-size: 16px;
+              color: #333;
+            }
+          }
+
+          .QR_renovate {
+              width: 196px;
+              overflow: hidden;
+              margin-top: 60px;
+              margin-left: 81px;
+              text-align: center;
+
+              >div {
+                position: relative;
+                height: 196px;
+
+                >a {
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  width: 70px;
+                  height: 35px;
+                  margin-left: -35px;
+                  margin-top: -17px;
+                  color: #333;
+                  text-decoration: none;
+                  line-height: 35px;
+                  border: 1px solid #dadadd;
+                  border-radius: 5px;
+                }
+              }
+
+              >p {
+                margin-top: 10px;
+                text-align: center;
+                font-size: 16px;
+                color: #333;
+              }
+          }
+
+          .massage {
+            position: absolute;
+            top: 308px;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            border-top: 1px solid #f2f2f2;
+
+            .install {
+              font-size: 0;
+              margin-top: 28px;
+
+              .mobile_icon {
+                display: inline-block;
+                width: 35px;
+                height: 32px;
+                margin-left: 38px;
+              }
+
+              .install_title {
+                display: inline-block;
+                height: 100%;
+              }
+            }
+
+            .adown_tip {
+              display: block;
+              width: 23px;
+              height: 13px;
+              margin: 5px 0 0 40px;
+              background: url(../../../assets/adown_tip.png) no-repeat center;
+              background-size: 50%;
+            }
+
+            .sweep {
+              font-size: 0;
+              margin-top: 5px;
+
+              .sweep_icon {
+                display: inline-block;
+                width: 35px;
+                height: 32px;
+                margin-left: 38px;
+              }
+
+              .sweep_title {
+                display: inline-block;
+                height: 100%;
+              }
+            }
+
+            .install .massage_p,
+            .sweep .massage_p {
+              font-size: 14px;
+              color: #777;
+            }
+
+            .install .massage_s,
+            .sweep .massage_s {
+              font-size: 12px;
+              color: #b7b6b6;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        .success {
+
+          .user {
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-left: -60px;
+          }
+
+          .success_massage1 {
+            width: 358px;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 260px;
+            color: #333;
+          }
+
+          .success_massage2 {
+            width: 358px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #777;
+          }
+
+          .success_btn {
+            width: 80px;
+            height: 30px;
+            background: #fff;
+            border: 1px solid #c7c7cc;
+            border-radius: 5px;
+            margin-top: 60px;
+            margin-left: 140px;
+            font-size: 12px;
+            color: #777;
+          }
+        }
+      }
+
+      .phone_login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 356px;
+        height: 290px;
+        background: #fff;
+        margin-top: -145px;
+        margin-left: -178px;
+        border-radius: 5px;
+        padding: 0 30px;
+        transition: .8s ease all;
+        opacity: 0;
+        z-index: -1;
+
+        .phone_box {
+          margin-top: 30px;
+
+          .txt_box {
+            padding: 5px 0;
+
+            >p {
+              color: #333;
+              font-size: 14px;
+              font-weight: bold;
+              line-height: 30px;
+            }
+
+            >input {
+              width: 100%;
+              height: 34px;
+              padding: 6px 12px;
+              font-size: 14px;
+              color: #555;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+
+            >div {
+              overflow: hidden;
+              margin-bottom: 20px;
+
+              >input {
+                float: left;
+                width: 60%;
+                height: 34px;
+                padding: 6px 12px;
+                font-size: 14px;
+                color: #555;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              }
+
+              >a {
+                float: right;
+                width: 36%;
+                height: 34px;
+                font-size: 14px;
+                color: #fff;
+                line-height: 34px;
+                text-align: center;
+                background: #04c1b8;
+                text-decoration: none;
+                border-radius: 3px;
+                border: 1px solid transparent;
+              }
+            }
+          }
+
+          .phonic_tip {
+            display: none;
+            text-decoration: none;
+            text-align: center;
+            color: #39a3e3;
+            font-size: 12px;
+          }
+
+          .phonic_tip:hover {
+            color: #0078c1;
+          }
+
+          .login_btn {
+            display: block;
+            width: 100%;
+            height: 38px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 38px;
+            background: #04c1b8;
+            border-radius: 6px;
+          }
+        }
+      }
+
+      .tab_btn {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        width: 40px;
+        height: 40px;
+        background: url(../../../assets/tab_bg.png) no-repeat;
+        background-position: -40px -40px;
+        // text-indent: -999em;
+      }
+    }
+    @media screen and (min-width:2560px) {
+      .load {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 535px;
+        height: 703px;
+        background: #fff;
+        margin-top: -352px;
+        margin-left: -267px;
+        border-radius: 5px;
+
+        .loading {
+
+          .QR_create {
+
+            .QR_code,
+            .load_box {
+              width: 300px;
+              height: 300px;
+              overflow: hidden;
+              margin-top: 76px;
+              margin-left: 118px;
+
+            }
+
+            .load_box {
+              position: relative;
+
+              >img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform:translate(-50%, -50%);
+                transform:translate(-50%, -50%);
+              }
+            }
+
+            .QR_p {
+              margin-top: 30px;
+              text-align: center;
+              font-size: 24px;
+              color: #333;
+            }
+          }
+
+          .QR_renovate {
+              width: 300px;
+              overflow: hidden;
+              margin-top: 76px;
+              margin-left: 118px;
+              text-align: center;
+
+              >div {
+                position: relative;
+                height: 300px;
+
+                >a {
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  width: 70px;
+                  height: 35px;
+                  margin-left: -35px;
+                  margin-top: -17px;
+                  color: #333;
+                  text-decoration: none;
+                  line-height: 35px;
+                  border: 1px solid #dadadd;
+                  border-radius: 5px;
+                }
+              }
+
+              >p {
+                margin-top: 30px;
+                text-align: center;
+                font-size: 24px;
+                color: #333;
+              }
+          }
+
+          .massage {
+            position: absolute;
+            top: 470px;
+            left: 0;
+            width: 535px;
+            height: 233px;
+            border-top: 1px solid #f2f2f2;
+
+            .install {
+              font-size: 0;
+              margin-top: 60px;
+
+              .mobile_icon {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                margin-left: 50px;
+              }
+
+              .install_title {
+                display: inline-block;
+                height: 100%;
+              }
+            }
+
+            .adown_tip {
+              display: block;
+              width: 40px;
+              height: 20px;
+              margin: 5px 0 0 48px;
+              background: url(../../../assets/adown_tip.png) no-repeat center;
+              background-size: 50%;
+            }
+
+            .sweep {
+              font-size: 0;
+              margin-top: 5px;
+
+              .sweep_icon {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                margin-left: 50px;
+              }
+
+              .sweep_title {
+                display: inline-block;
+                height: 100%;
+              }
+            }
+
+            .install .massage_p,
+            .sweep .massage_p {
+              font-size: 20px;
+              color: #777;
+            }
+
+            .install .massage_s,
+            .sweep .massage_s {
+              font-size: 18px;
+              color: #b7b6b6;
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .success {
+
+          .user {
+            position: absolute;
+            top: 142px;
+            left: 50%;
+            width: 168px;
+            height: 168px;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-left: -84px;
+          }
+
+          .success_massage1 {
+            width: 535px;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 370px;
+            color: #333;
+          }
+
+          .success_massage2 {
+            width: 535px;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 28px;
+            color: #777;
+          }
+
+          .success_btn {
+            width: 106px;
+            height: 42px;
+            background: #fff;
+            border: 1px solid #c7c7cc;
+            border-radius: 5px;
+            margin-top: 153px;
+            margin-left: 214px;
+            font-size: 18px;
+            color: #777;
+          }
+        }
+      }
+    }
+  }
+}

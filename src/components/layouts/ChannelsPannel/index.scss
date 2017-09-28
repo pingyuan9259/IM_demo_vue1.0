@@ -1,0 +1,31 @@
+@import '../../../assets/sprites/sprites';
+
+.layout-channels {
+  position: relative;
+  width: 248px;
+  height: 100%;
+  background: #354053;
+
+  .write-link {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    bottom: 35px;
+    width: 184px;
+    height: 40px;
+    margin-left: -92px;
+    line-height: 38px;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    z-index: 1;
+    text-decoration: none;
+    background: rgba(4,186,177,.7);
+
+    > i {
+      @include sprite($write_link, inline-block);
+      vertical-align: -5px;
+      margin-right: 5px;
+    }
+  }
+}

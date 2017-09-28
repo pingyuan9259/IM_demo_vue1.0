@@ -1,0 +1,197 @@
+@import '../../../styles/base/common';
+@import '../../../assets/sprites/sprites';
+
+.module-channel-list {
+  position: absolute;
+  width: 100%;
+  top: 160px;
+  bottom: 110px;
+  overflow-y: auto;
+
+  /* Let's get this party started */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: rgba(200, 203, 208, .2);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    transition: background 1s;
+  }
+
+  &::-webkit-scrollbar-track:window-inactive { // 激活状态
+    background: rgba(200, 203, 208, .2);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(200, 203, 208, .5);
+  }
+
+  &::-webkit-scrollbar-thumb:window-inactive { // 激活状态
+    background: rgba(200, 203, 208, .2);
+    transition: background 1s;
+  }
+
+
+  ul.channel-list-con {
+
+    li.channel-list-item {
+      position: relative;
+      height: 65px;
+      padding: 10px 15px;
+      color: #fff;
+      font-size: 0;
+      cursor: pointer;
+
+      &.to-top {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 23px 18px 0;
+          border-color: transparent #212835 transparent transparent;
+        }
+      }
+
+      &.active, &:hover {
+        position: relative;
+        background: #2D3648;
+      }
+
+      &.active {
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4px;
+          height: 100%;
+          background: #04C9BF;
+        }
+      }
+
+      .channel-item-avatar {
+        float: left;
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+
+        .item-avatar-con {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .message-unread-disturb {
+          position: absolute;
+          right: -4.5px;
+          top: -4.5px;
+          height: 9px;
+          width: 9px;
+          line-height: 15px;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 10px;
+          text-align: center;
+          background: #E14038;
+        }
+
+        .message-unread {
+          position: absolute;
+          right: -7.5px;
+          top: -7.5px;
+          height: 15px;
+          line-height: 15px;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 10px;
+          text-align: center;
+          background: #E14038;
+
+          &.one {
+            width: 15px;
+          }
+
+          &.two {
+            width: auto;
+            width: 22px;
+            border-radius: 10px;
+          }
+
+          &.more {
+            width: auto;
+            width: 22px;
+            border-radius: 10px;
+            line-height: 10px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .channel-item-info {
+        float: left;
+        position: relative;
+        display: inline-block;
+        width: 145px;
+        margin-top: 7px;
+        margin-left: 13px;
+        font-size: 14px;
+
+        > i {
+          position: absolute;
+          top: 18px;
+          right: -15px;
+          @include sprite($no_disturb, inline-block);
+        }
+
+        .item-info {
+          @include ellipsis;
+          margin-bottom: 5px;
+          height: 14px;
+
+          &.last-message {
+            color: #7D848E;
+            height: 20px;
+            padding-top: 2px;
+
+            span.emoji-inner {
+              display: inline-block;
+              text-indent: -9999px;
+              width: 100%;
+              height: 100%;
+              vertical-align: baseline;
+            }
+
+            span.emoji-sizer {
+              line-height: 18px;
+              font-size: 14px;
+            }
+
+            span.emoji-outer {
+              display: inline-block;
+              height: 1em;
+              width: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

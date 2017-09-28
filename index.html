@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <meta name="apple-moible-web-app-capable" content="yes" />
+  <meta name="apple-moible-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no">
+  <title></title>
+  <style>
+    .loading-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: 9999;
+    }
+    .start-container {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      top: 50%;
+      margin-top: -10px;
+      text-align: center;
+    }
+
+    @-webkit-keyframes v-pulseStretchDelay {
+        0%,
+        80% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-opacity: 1;
+            opacity: 1;
+        }
+        45% {
+            -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+            -webkit-opacity: 0.7;
+            opacity: 0.7;
+        }
+    }
+    @keyframes v-pulseStretchDelay {
+        0%,
+        80% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-opacity: 1;
+            opacity: 1;
+        }
+        45% {
+            -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+            -webkit-opacity: 0.7;
+            opacity: 0.7;
+        }
+    }
+  </style>
+  <link id="icon" rel="shortcut icon" href="//o3pvuu23u.qnssl.com/image/favicon.ico" type="image/x-icon">
+  <script>
+    (function(para) {
+      var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+      w['sensorsDataAnalytic201505'] = n;
+      w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+      var ifs = ['track','quick','register','registerPage','registerOnce','registerSession','registerSessionOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify'];
+      for (var i = 0; i < ifs.length; i++) {
+        w[n][ifs[i]] = w[n].call(null, ifs[i]);
+      }
+      if (!w[n]._t) {
+        x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+        x.async = 1;
+        x.src = p;
+        y.parentNode.insertBefore(x, y);
+        w[n]._t = 1 * new Date();
+        w[n].para = para;
+      }
+    })({
+      sdk_url: '//o3pvuu23u.qnssl.com/js/sensorsdata-1.4.3.min.js',
+      name: 'sa',
+      server_url: window.location.protocol.indexOf('https') !== -1 ? 'https://ss.tinfinite.com:4006/sa' : 'http://ss.tinfinite.com:8006/sa'
+    });
+    sa.quick('autoTrack');//神策系统必须是1.4最新版及以上
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?8a5095accfff1f5fd6cb4c838f00588e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="loading-container">
+    <div class="start-container">
+      <div class="v-pulse v-pulse1" style="animation-fill-mode: both; animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-iteration-count: infinite; animation-duration: 0.75s; animation-name: v-pulseStretchDelay; display: inline-block; border-radius: 100%; margin: 2px; height: 15px; width: 15px; animation-delay: 0.12s; background-color: rgb(4, 201, 191);">
+      </div>
+      <div class="v-pulse v-pulse2" style="animation-fill-mode: both; animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-iteration-count: infinite; animation-duration: 0.75s; animation-name: v-pulseStretchDelay; display: inline-block; border-radius: 100%; margin: 2px; height: 15px; width: 15px; animation-delay: 0.24s; background-color: rgb(4, 201, 191);">
+      </div>
+      <div class="v-pulse v-pulse3" style="animation-fill-mode: both; animation-timing-function: cubic-bezier(0.2, 0.68, 0.18, 1.08); animation-iteration-count: infinite; animation-duration: 0.75s; animation-name: v-pulseStretchDelay; display: inline-block; border-radius: 100%; margin: 2px; height: 15px; width: 15px; animation-delay: 0.36s; background-color: rgb(4, 201, 191);">
+      </div>
+    </div>
+  </div>
+  <div id='outdated'></div>  <!-- for globalSetting's checkBrowser-->
+  <app></app>
+  <!-- built files will be auto injected -->
+  <script src="//o3pvuu23u.qnssl.com/js/qrcode.min.js"></script>
+  <script src="//o3pvuu23u.qnssl.com/js/emoji-data-list.min.js?v=0.0.1"></script>
+  <script src="//o3pvuu23u.qnssl.com/js/emoji.min.js?v=0.0.1"></script>
+</body>
+
+</html>
